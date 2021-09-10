@@ -1,0 +1,15 @@
+name: 'Add PR link'
+description: 'Add link to PR evaluation env'
+inputs:
+  link-pattern:
+    description: 'pattern for link - e.g., `https://pr-{pr_number}-myapp.ci.fakedomain.com/`'
+    required: true
+  repo-token:
+    description: ''
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
+branding:
+  icon: 'link-2'  
+  color: 'blue'
