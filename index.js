@@ -21,7 +21,7 @@ const baseIssuesArgs = {
 };
 
 const addPrComment = async (body) => {
-  return octokit.issues.createComment({
+  return await octokit.rest.issues.createComment({
       ...baseIssuesArgs,
       body
   });
@@ -45,7 +45,7 @@ const buildLink = async () => {
     
     const link = buildLink();
     core.debug(`adding pr comment for link ${link}.`);
-    addPrComment(link);
+    await addPrComment(link);
     
     core.debug(`done ok.`);
   } catch (error) {
