@@ -43,7 +43,7 @@ const buildLink = async () => {
        return;
     }
     
-    const linkComment = buildLink();
+    const link = buildLink();
     core.debug(`adding pr comment for link ${link}.`);
     addPrComment(link);
     
