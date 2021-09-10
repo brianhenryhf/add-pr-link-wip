@@ -21,13 +21,13 @@ const baseIssuesArgs = {
 };
 
 const addPrComment = async (body) => {
-  return await octokit.rest.issues.createComment({
+  return octokit.rest.issues.createComment({
       ...baseIssuesArgs,
       body
   });
 };
 
-const buildLink = async () => {
+const buildLink = () => {
   return linkPattern.replace(/\{([^}]+)\}/g, (match, p1) => {
     if (p1 === 'pr_number') {
       return evthookPayload.pull_request.number;
