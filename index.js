@@ -45,7 +45,7 @@ const buildLink = () => {
     
     const link = buildLink();
     core.debug(`adding pr comment for link ${link}.`);
-    await addPrComment(link);
+    await addPrComment(`PR review instance: ${link}`);
     
     core.debug(`done ok.`);
   } catch (error) {
