@@ -1,0 +1,19 @@
+{
+  "name": "add-pr-likn",
+  "version": "1.0.0",
+  "description": "Github Action: Add link to PR evaluation env",
+  "main": "index.js",
+  "scripts": {
+    "lint": " ./node_modules/eslint/bin/eslint.js . --ext .js"
+  },
+  "keywords": [],
+  "author": "Brian Henry",
+  "dependencies": {
+    "@actions/core": "^1.5.0",
+    "@actions/github": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-node": "^11.0.0"
+  }
+}
