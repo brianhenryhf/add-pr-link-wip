@@ -12,7 +12,7 @@ const ghToken = core.getInput('repo-token');
 
 const evthookPayload = github.context.payload;
 
-const octokit = new github.GitHub(ghToken);
+const octokit = new github.getOctokit(ghToken);
 
 const baseIssuesArgs = {
     owner: (evthookPayload.organization || evthookPayload.repository.owner).login,
